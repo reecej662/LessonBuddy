@@ -1,0 +1,606 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		341583871B56F15C0014F5C8 /* optionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341583861B56F15C0014F5C8 /* optionsViewController.swift */; };
+		341583891B572BD90014F5C8 /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341583881B572BD90014F5C8 /* DemoViewController.swift */; };
+		3415838B1B57315B0014F5C8 /* rightIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3415838A1B57315B0014F5C8 /* rightIcon.png */; };
+		3415838D1B5732A60014F5C8 /* leftIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3415838C1B5732A60014F5C8 /* leftIcon.png */; };
+		34180BB71B55ADB400145349 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 34180BB61B55ADB400145349 /* background.png */; };
+		343156E61B40FB770033310C /* emailIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 343156E31B40FB770033310C /* emailIcon.png */; };
+		343156E71B40FB770033310C /* nameIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 343156E41B40FB770033310C /* nameIcon.png */; };
+		343156E81B40FB770033310C /* passwordIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 343156E51B40FB770033310C /* passwordIcon.png */; };
+		3441EC671B5A3CFD00334A89 /* moreButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 3441EC631B5A3CFD00334A89 /* moreButton.png */; };
+		3441EC681B5A3CFD00334A89 /* sampleLessons.png in Resources */ = {isa = PBXBuildFile; fileRef = 3441EC641B5A3CFD00334A89 /* sampleLessons.png */; };
+		3441EC691B5A3CFD00334A89 /* sampleLogInImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 3441EC651B5A3CFD00334A89 /* sampleLogInImage.png */; };
+		3441EC6A1B5A3CFD00334A89 /* signUpImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 3441EC661B5A3CFD00334A89 /* signUpImage.png */; };
+		34A1A44B1B4E5A0F002AE06E /* more.png in Resources */ = {isa = PBXBuildFile; fileRef = 34A1A44A1B4E5A0F002AE06E /* more.png */; };
+		34D2BF561B3A6EED00AD1ABE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2BF551B3A6EED00AD1ABE /* AppDelegate.swift */; };
+		34D2BF591B3A6EED00AD1ABE /* My_Swim_Schedule.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 34D2BF571B3A6EED00AD1ABE /* My_Swim_Schedule.xcdatamodeld */; };
+		34D2BF5E1B3A6EED00AD1ABE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34D2BF5C1B3A6EED00AD1ABE /* Main.storyboard */; };
+		34D2BF601B3A6EED00AD1ABE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34D2BF5F1B3A6EED00AD1ABE /* Images.xcassets */; };
+		34D2BF6F1B3A6EED00AD1ABE /* My_Swim_ScheduleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2BF6E1B3A6EED00AD1ABE /* My_Swim_ScheduleTests.swift */; };
+		34D2BF7F1B3A6F0300AD1ABE /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34D2BF791B3A6F0300AD1ABE /* Bolts.framework */; };
+		34D2BF801B3A6F0400AD1ABE /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34D2BF7A1B3A6F0300AD1ABE /* Parse.framework */; };
+		34D2BF811B3A6F0400AD1ABE /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34D2BF7B1B3A6F0300AD1ABE /* ParseCrashReporting.framework */; };
+		34D2BF821B3A6F0400AD1ABE /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34D2BF7C1B3A6F0300AD1ABE /* ParseFacebookUtils.framework */; };
+		34D2BF831B3A6F0400AD1ABE /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34D2BF7D1B3A6F0300AD1ABE /* ParseFacebookUtilsV4.framework */; };
+		34D2BF841B3A6F0400AD1ABE /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34D2BF7E1B3A6F0300AD1ABE /* ParseUI.framework */; };
+		34D2BF861B3A6F3900AD1ABE /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34D2BF851B3A6F3900AD1ABE /* AudioToolbox.framework */; };
+		34D2BF881B3A6F4100AD1ABE /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34D2BF871B3A6F4100AD1ABE /* CFNetwork.framework */; };
+		34D2BF8A1B3A6F4700AD1ABE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34D2BF891B3A6F4700AD1ABE /* CoreGraphics.framework */; };
+		34D2BF8C1B3A6F5200AD1ABE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34D2BF8B1B3A6F5200AD1ABE /* CoreLocation.framework */; };
+		34D2BF8E1B3A6F5900AD1ABE /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34D2BF8D1B3A6F5900AD1ABE /* MobileCoreServices.framework */; };
+		34D2BF901B3A6F6000AD1ABE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34D2BF8F1B3A6F6000AD1ABE /* QuartzCore.framework */; };
+		34D2BF921B3A6F6700AD1ABE /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34D2BF911B3A6F6700AD1ABE /* Security.framework */; };
+		34D2BF941B3A6F7100AD1ABE /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34D2BF931B3A6F7100AD1ABE /* StoreKit.framework */; };
+		34D2BF961B3A6F7B00AD1ABE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34D2BF951B3A6F7B00AD1ABE /* SystemConfiguration.framework */; };
+		34D2BF981B3A6F8A00AD1ABE /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 34D2BF971B3A6F8A00AD1ABE /* libz.dylib */; };
+		34D2BF9A1B3A6F9400AD1ABE /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 34D2BF991B3A6F9400AD1ABE /* libsqlite3.dylib */; };
+		34D2BFA31B3A711A00AD1ABE /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 34D2BF9E1B3A711A00AD1ABE /* plus.png */; };
+		34D2BFA41B3A711A00AD1ABE /* timelineIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 34D2BF9F1B3A711A00AD1ABE /* timelineIcon.png */; };
+		34D2BFAB1B3A712A00AD1ABE /* calendarImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 34D2BFA71B3A712A00AD1ABE /* calendarImage.png */; };
+		34D2BFAC1B3A712A00AD1ABE /* clockImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 34D2BFA81B3A712A00AD1ABE /* clockImage.png */; };
+		34D2BFB01B3A718700AD1ABE /* ViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2BFAF1B3A718700AD1ABE /* ViewStyle.swift */; };
+		34D2BFB21B3A798700AD1ABE /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2BFB11B3A798700AD1ABE /* TimelineViewController.swift */; };
+		34D2BFB41B3A7A5E00AD1ABE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2BFB31B3A7A5E00AD1ABE /* LoginViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		34D2BF691B3A6EED00AD1ABE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34D2BF481B3A6EED00AD1ABE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 34D2BF4F1B3A6EED00AD1ABE;
+			remoteInfo = "My Swim Schedule";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		341583861B56F15C0014F5C8 /* optionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = optionsViewController.swift; sourceTree = "<group>"; };
+		341583881B572BD90014F5C8 /* DemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
+		3415838A1B57315B0014F5C8 /* rightIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rightIcon.png; sourceTree = "<group>"; };
+		3415838C1B5732A60014F5C8 /* leftIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leftIcon.png; sourceTree = "<group>"; };
+		34180BB61B55ADB400145349 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		343156E31B40FB770033310C /* emailIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emailIcon.png; sourceTree = "<group>"; };
+		343156E41B40FB770033310C /* nameIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nameIcon.png; sourceTree = "<group>"; };
+		343156E51B40FB770033310C /* passwordIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = passwordIcon.png; sourceTree = "<group>"; };
+		3441EC631B5A3CFD00334A89 /* moreButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moreButton.png; sourceTree = "<group>"; };
+		3441EC641B5A3CFD00334A89 /* sampleLessons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sampleLessons.png; sourceTree = "<group>"; };
+		3441EC651B5A3CFD00334A89 /* sampleLogInImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sampleLogInImage.png; sourceTree = "<group>"; };
+		3441EC661B5A3CFD00334A89 /* signUpImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = signUpImage.png; sourceTree = "<group>"; };
+		34A1A44A1B4E5A0F002AE06E /* more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = more.png; sourceTree = "<group>"; };
+		34CFD6DD1B4F8F93003766CB /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		34D2BF501B3A6EED00AD1ABE /* My Swim Schedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Swim Schedule.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		34D2BF541B3A6EED00AD1ABE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34D2BF551B3A6EED00AD1ABE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		34D2BF581B3A6EED00AD1ABE /* My_Swim_Schedule.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = My_Swim_Schedule.xcdatamodel; sourceTree = "<group>"; };
+		34D2BF5D1B3A6EED00AD1ABE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		34D2BF5F1B3A6EED00AD1ABE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		34D2BF681B3A6EED00AD1ABE /* My Swim ScheduleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "My Swim ScheduleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		34D2BF6D1B3A6EED00AD1ABE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34D2BF6E1B3A6EED00AD1ABE /* My_Swim_ScheduleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My_Swim_ScheduleTests.swift; sourceTree = "<group>"; };
+		34D2BF791B3A6F0300AD1ABE /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		34D2BF7A1B3A6F0300AD1ABE /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		34D2BF7B1B3A6F0300AD1ABE /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
+		34D2BF7C1B3A6F0300AD1ABE /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		34D2BF7D1B3A6F0300AD1ABE /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
+		34D2BF7E1B3A6F0300AD1ABE /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		34D2BF851B3A6F3900AD1ABE /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		34D2BF871B3A6F4100AD1ABE /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		34D2BF891B3A6F4700AD1ABE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		34D2BF8B1B3A6F5200AD1ABE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		34D2BF8D1B3A6F5900AD1ABE /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		34D2BF8F1B3A6F6000AD1ABE /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		34D2BF911B3A6F6700AD1ABE /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		34D2BF931B3A6F7100AD1ABE /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		34D2BF951B3A6F7B00AD1ABE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		34D2BF971B3A6F8A00AD1ABE /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		34D2BF991B3A6F9400AD1ABE /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		34D2BF9E1B3A711A00AD1ABE /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus.png; sourceTree = "<group>"; };
+		34D2BF9F1B3A711A00AD1ABE /* timelineIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timelineIcon.png; sourceTree = "<group>"; };
+		34D2BFA71B3A712A00AD1ABE /* calendarImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendarImage.png; sourceTree = "<group>"; };
+		34D2BFA81B3A712A00AD1ABE /* clockImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clockImage.png; sourceTree = "<group>"; };
+		34D2BFAF1B3A718700AD1ABE /* ViewStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewStyle.swift; sourceTree = "<group>"; };
+		34D2BFB11B3A798700AD1ABE /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
+		34D2BFB31B3A7A5E00AD1ABE /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		34D2BF4D1B3A6EED00AD1ABE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34D2BF9A1B3A6F9400AD1ABE /* libsqlite3.dylib in Frameworks */,
+				34D2BF981B3A6F8A00AD1ABE /* libz.dylib in Frameworks */,
+				34D2BF961B3A6F7B00AD1ABE /* SystemConfiguration.framework in Frameworks */,
+				34D2BF941B3A6F7100AD1ABE /* StoreKit.framework in Frameworks */,
+				34D2BF921B3A6F6700AD1ABE /* Security.framework in Frameworks */,
+				34D2BF901B3A6F6000AD1ABE /* QuartzCore.framework in Frameworks */,
+				34D2BF8E1B3A6F5900AD1ABE /* MobileCoreServices.framework in Frameworks */,
+				34D2BF8C1B3A6F5200AD1ABE /* CoreLocation.framework in Frameworks */,
+				34D2BF8A1B3A6F4700AD1ABE /* CoreGraphics.framework in Frameworks */,
+				34D2BF881B3A6F4100AD1ABE /* CFNetwork.framework in Frameworks */,
+				34D2BF861B3A6F3900AD1ABE /* AudioToolbox.framework in Frameworks */,
+				34D2BF841B3A6F0400AD1ABE /* ParseUI.framework in Frameworks */,
+				34D2BF801B3A6F0400AD1ABE /* Parse.framework in Frameworks */,
+				34D2BF811B3A6F0400AD1ABE /* ParseCrashReporting.framework in Frameworks */,
+				34D2BF821B3A6F0400AD1ABE /* ParseFacebookUtils.framework in Frameworks */,
+				34D2BF7F1B3A6F0300AD1ABE /* Bolts.framework in Frameworks */,
+				34D2BF831B3A6F0400AD1ABE /* ParseFacebookUtilsV4.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34D2BF651B3A6EED00AD1ABE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		34D2BF471B3A6EED00AD1ABE = {
+			isa = PBXGroup;
+			children = (
+				34D2BF521B3A6EED00AD1ABE /* My Swim Schedule */,
+				34D2BF6B1B3A6EED00AD1ABE /* My Swim ScheduleTests */,
+				34D2BF511B3A6EED00AD1ABE /* Products */,
+				34D2BF781B3A6F0300AD1ABE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		34D2BF511B3A6EED00AD1ABE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				34D2BF501B3A6EED00AD1ABE /* My Swim Schedule.app */,
+				34D2BF681B3A6EED00AD1ABE /* My Swim ScheduleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		34D2BF521B3A6EED00AD1ABE /* My Swim Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				34D2BF551B3A6EED00AD1ABE /* AppDelegate.swift */,
+				34D2BFAF1B3A718700AD1ABE /* ViewStyle.swift */,
+				341583881B572BD90014F5C8 /* DemoViewController.swift */,
+				34D2BFB31B3A7A5E00AD1ABE /* LoginViewController.swift */,
+				34D2BFB11B3A798700AD1ABE /* TimelineViewController.swift */,
+				341583861B56F15C0014F5C8 /* optionsViewController.swift */,
+				34D2BF5C1B3A6EED00AD1ABE /* Main.storyboard */,
+				34180BB61B55ADB400145349 /* background.png */,
+				34A1A44A1B4E5A0F002AE06E /* more.png */,
+				343156E31B40FB770033310C /* emailIcon.png */,
+				343156E51B40FB770033310C /* passwordIcon.png */,
+				343156E41B40FB770033310C /* nameIcon.png */,
+				3415838A1B57315B0014F5C8 /* rightIcon.png */,
+				3415838C1B5732A60014F5C8 /* leftIcon.png */,
+				3441EC631B5A3CFD00334A89 /* moreButton.png */,
+				3441EC641B5A3CFD00334A89 /* sampleLessons.png */,
+				3441EC651B5A3CFD00334A89 /* sampleLogInImage.png */,
+				3441EC661B5A3CFD00334A89 /* signUpImage.png */,
+				34D2BF5F1B3A6EED00AD1ABE /* Images.xcassets */,
+				34D2BF571B3A6EED00AD1ABE /* My_Swim_Schedule.xcdatamodeld */,
+				34D2BF9E1B3A711A00AD1ABE /* plus.png */,
+				34D2BF9F1B3A711A00AD1ABE /* timelineIcon.png */,
+				34D2BFA71B3A712A00AD1ABE /* calendarImage.png */,
+				34D2BFA81B3A712A00AD1ABE /* clockImage.png */,
+				34CFD6DD1B4F8F93003766CB /* Bridging-Header.h */,
+				34D2BF531B3A6EED00AD1ABE /* Supporting Files */,
+			);
+			path = "My Swim Schedule";
+			sourceTree = "<group>";
+		};
+		34D2BF531B3A6EED00AD1ABE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				34D2BF541B3A6EED00AD1ABE /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		34D2BF6B1B3A6EED00AD1ABE /* My Swim ScheduleTests */ = {
+			isa = PBXGroup;
+			children = (
+				34D2BF6E1B3A6EED00AD1ABE /* My_Swim_ScheduleTests.swift */,
+				34D2BF6C1B3A6EED00AD1ABE /* Supporting Files */,
+			);
+			path = "My Swim ScheduleTests";
+			sourceTree = "<group>";
+		};
+		34D2BF6C1B3A6EED00AD1ABE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				34D2BF6D1B3A6EED00AD1ABE /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		34D2BF781B3A6F0300AD1ABE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				34D2BF991B3A6F9400AD1ABE /* libsqlite3.dylib */,
+				34D2BF971B3A6F8A00AD1ABE /* libz.dylib */,
+				34D2BF951B3A6F7B00AD1ABE /* SystemConfiguration.framework */,
+				34D2BF931B3A6F7100AD1ABE /* StoreKit.framework */,
+				34D2BF911B3A6F6700AD1ABE /* Security.framework */,
+				34D2BF8F1B3A6F6000AD1ABE /* QuartzCore.framework */,
+				34D2BF8D1B3A6F5900AD1ABE /* MobileCoreServices.framework */,
+				34D2BF8B1B3A6F5200AD1ABE /* CoreLocation.framework */,
+				34D2BF891B3A6F4700AD1ABE /* CoreGraphics.framework */,
+				34D2BF871B3A6F4100AD1ABE /* CFNetwork.framework */,
+				34D2BF851B3A6F3900AD1ABE /* AudioToolbox.framework */,
+				34D2BF791B3A6F0300AD1ABE /* Bolts.framework */,
+				34D2BF7A1B3A6F0300AD1ABE /* Parse.framework */,
+				34D2BF7B1B3A6F0300AD1ABE /* ParseCrashReporting.framework */,
+				34D2BF7C1B3A6F0300AD1ABE /* ParseFacebookUtils.framework */,
+				34D2BF7D1B3A6F0300AD1ABE /* ParseFacebookUtilsV4.framework */,
+				34D2BF7E1B3A6F0300AD1ABE /* ParseUI.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		34D2BF4F1B3A6EED00AD1ABE /* My Swim Schedule */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34D2BF721B3A6EED00AD1ABE /* Build configuration list for PBXNativeTarget "My Swim Schedule" */;
+			buildPhases = (
+				34D2BF4C1B3A6EED00AD1ABE /* Sources */,
+				34D2BF4D1B3A6EED00AD1ABE /* Frameworks */,
+				34D2BF4E1B3A6EED00AD1ABE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "My Swim Schedule";
+			productName = "My Swim Schedule";
+			productReference = 34D2BF501B3A6EED00AD1ABE /* My Swim Schedule.app */;
+			productType = "com.apple.product-type.application";
+		};
+		34D2BF671B3A6EED00AD1ABE /* My Swim ScheduleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34D2BF751B3A6EED00AD1ABE /* Build configuration list for PBXNativeTarget "My Swim ScheduleTests" */;
+			buildPhases = (
+				34D2BF641B3A6EED00AD1ABE /* Sources */,
+				34D2BF651B3A6EED00AD1ABE /* Frameworks */,
+				34D2BF661B3A6EED00AD1ABE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				34D2BF6A1B3A6EED00AD1ABE /* PBXTargetDependency */,
+			);
+			name = "My Swim ScheduleTests";
+			productName = "My Swim ScheduleTests";
+			productReference = 34D2BF681B3A6EED00AD1ABE /* My Swim ScheduleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		34D2BF481B3A6EED00AD1ABE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = RJ;
+				TargetAttributes = {
+					34D2BF4F1B3A6EED00AD1ABE = {
+						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = ATX6HC2GJE;
+					};
+					34D2BF671B3A6EED00AD1ABE = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = 34D2BF4F1B3A6EED00AD1ABE;
+					};
+				};
+			};
+			buildConfigurationList = 34D2BF4B1B3A6EED00AD1ABE /* Build configuration list for PBXProject "My Swim Schedule" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 34D2BF471B3A6EED00AD1ABE;
+			productRefGroup = 34D2BF511B3A6EED00AD1ABE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				34D2BF4F1B3A6EED00AD1ABE /* My Swim Schedule */,
+				34D2BF671B3A6EED00AD1ABE /* My Swim ScheduleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		34D2BF4E1B3A6EED00AD1ABE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3441EC681B5A3CFD00334A89 /* sampleLessons.png in Resources */,
+				34D2BF5E1B3A6EED00AD1ABE /* Main.storyboard in Resources */,
+				343156E81B40FB770033310C /* passwordIcon.png in Resources */,
+				34180BB71B55ADB400145349 /* background.png in Resources */,
+				343156E61B40FB770033310C /* emailIcon.png in Resources */,
+				3415838D1B5732A60014F5C8 /* leftIcon.png in Resources */,
+				34D2BFAB1B3A712A00AD1ABE /* calendarImage.png in Resources */,
+				3415838B1B57315B0014F5C8 /* rightIcon.png in Resources */,
+				34D2BFA41B3A711A00AD1ABE /* timelineIcon.png in Resources */,
+				34A1A44B1B4E5A0F002AE06E /* more.png in Resources */,
+				34D2BFAC1B3A712A00AD1ABE /* clockImage.png in Resources */,
+				3441EC671B5A3CFD00334A89 /* moreButton.png in Resources */,
+				3441EC691B5A3CFD00334A89 /* sampleLogInImage.png in Resources */,
+				34D2BFA31B3A711A00AD1ABE /* plus.png in Resources */,
+				3441EC6A1B5A3CFD00334A89 /* signUpImage.png in Resources */,
+				34D2BF601B3A6EED00AD1ABE /* Images.xcassets in Resources */,
+				343156E71B40FB770033310C /* nameIcon.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34D2BF661B3A6EED00AD1ABE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		34D2BF4C1B3A6EED00AD1ABE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				341583871B56F15C0014F5C8 /* optionsViewController.swift in Sources */,
+				34D2BF591B3A6EED00AD1ABE /* My_Swim_Schedule.xcdatamodeld in Sources */,
+				34D2BFB21B3A798700AD1ABE /* TimelineViewController.swift in Sources */,
+				34D2BFB01B3A718700AD1ABE /* ViewStyle.swift in Sources */,
+				341583891B572BD90014F5C8 /* DemoViewController.swift in Sources */,
+				34D2BFB41B3A7A5E00AD1ABE /* LoginViewController.swift in Sources */,
+				34D2BF561B3A6EED00AD1ABE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34D2BF641B3A6EED00AD1ABE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34D2BF6F1B3A6EED00AD1ABE /* My_Swim_ScheduleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		34D2BF6A1B3A6EED00AD1ABE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 34D2BF4F1B3A6EED00AD1ABE /* My Swim Schedule */;
+			targetProxy = 34D2BF691B3A6EED00AD1ABE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		34D2BF5C1B3A6EED00AD1ABE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				34D2BF5D1B3A6EED00AD1ABE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		34D2BF701B3A6EED00AD1ABE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		34D2BF711B3A6EED00AD1ABE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		34D2BF731B3A6EED00AD1ABE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				INFOPLIST_FILE = "My Swim Schedule/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+			};
+			name = Debug;
+		};
+		34D2BF741B3A6EED00AD1ABE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				INFOPLIST_FILE = "My Swim Schedule/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+			};
+			name = Release;
+		};
+		34D2BF761B3A6EED00AD1ABE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "My Swim ScheduleTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/My Swim Schedule.app/My Swim Schedule";
+			};
+			name = Debug;
+		};
+		34D2BF771B3A6EED00AD1ABE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "My Swim ScheduleTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/My Swim Schedule.app/My Swim Schedule";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		34D2BF4B1B3A6EED00AD1ABE /* Build configuration list for PBXProject "My Swim Schedule" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34D2BF701B3A6EED00AD1ABE /* Debug */,
+				34D2BF711B3A6EED00AD1ABE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		34D2BF721B3A6EED00AD1ABE /* Build configuration list for PBXNativeTarget "My Swim Schedule" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34D2BF731B3A6EED00AD1ABE /* Debug */,
+				34D2BF741B3A6EED00AD1ABE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		34D2BF751B3A6EED00AD1ABE /* Build configuration list for PBXNativeTarget "My Swim ScheduleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34D2BF761B3A6EED00AD1ABE /* Debug */,
+				34D2BF771B3A6EED00AD1ABE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		34D2BF571B3A6EED00AD1ABE /* My_Swim_Schedule.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				34D2BF581B3A6EED00AD1ABE /* My_Swim_Schedule.xcdatamodel */,
+			);
+			currentVersion = 34D2BF581B3A6EED00AD1ABE /* My_Swim_Schedule.xcdatamodel */;
+			path = My_Swim_Schedule.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 34D2BF481B3A6EED00AD1ABE /* Project object */;
+}
