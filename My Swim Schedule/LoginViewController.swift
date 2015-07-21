@@ -112,7 +112,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     
                 } else {
                 
-                    var user = PFUser()
+                    let user = PFUser()
                     user.username = textField1.text
                     user.setValue(textField2.text, forKey: "name")
                     user.password = textField3.text
@@ -138,7 +138,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                         
                         } else {
                         
-                            if let errorString = error!.userInfo?["error"] as? String {
+                            if let errorString = error!.userInfo["error"] as? String {
                             
                                 errorMessage = errorString
                             
@@ -154,7 +154,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     
             } else {
                 
-                PFUser.logInWithUsernameInBackground(textField1.text, password: textField2.text, block: { (user, error) -> Void in
+                PFUser.logInWithUsernameInBackground(textField1.text!, password: textField2.text!, block: { (user, error) -> Void in
                     
                     self.activityIndicator.stopAnimating()
                     UIApplication.sharedApplication().endIgnoringInteractionEvents()
@@ -175,7 +175,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                         
                     } else {
                         
-                        if let errorString = error!.userInfo?["error"] as? String {
+                        if let errorString = error!.userInfo["error"] as? String {
                             
                             errorMessage = errorString
                             
@@ -195,7 +195,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     func displayAlert(title: String, message: String) {
         
-        var alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction((UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in })))
         
         self.presentViewController(alert, animated: true, completion: nil)
@@ -258,8 +258,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     func animateTextField(up: Bool) {
-        var movement = (up ? -kbHeight: kbHeight)
-        var barOffset = (up ? offset: -offset)
+        let movement = (up ? -kbHeight: kbHeight)
+        let barOffset = (up ? offset: -offset)
         
         UIView.animateWithDuration(0.3, animations: {
             
@@ -280,12 +280,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         updateViewConstraints(toInterfaceOrientation)
         actionSelectionView.removeFromSuperview()
-        
-        for object in textLines{
-            //object.removeFromSuperview()
-        }
-        
-        //addLines()
         
     }
     

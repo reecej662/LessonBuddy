@@ -86,7 +86,7 @@ class timelineView: ViewStyle, UIScrollViewDelegate {
         
         if !firstLaunch {
             
-            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "FirstLaunch")
+            NSUserDefaults.standardUserDefaults().setBool(false, forKey: "FirstLaunch")
             self.performSegueWithIdentifier("demo", sender: self)
             
         }
@@ -131,7 +131,7 @@ class timelineView: ViewStyle, UIScrollViewDelegate {
                 var sameDayLessons = [lessonStruct()]
                 sameDayLessons.removeAll(keepCapacity: true)
                 
-                do{
+                repeat {
                     sameDayLessons.append(lessonArray[x])
                     x++
                 } while(x < lessonArray.count && lessonArray[x-1].dateString == lessonArray[x].dateString)
@@ -159,7 +159,7 @@ class timelineView: ViewStyle, UIScrollViewDelegate {
         activityIndicator.startAnimating()
         //UIApplication.sharedApplication().beginIgnoringInteractionEvents()
         
-        var query = PFQuery(className: "lessons")
+        let query = PFQuery(className: "lessons")
         query.whereKey("clientId", equalTo: userId!)
         query.orderByAscending("date")
         
@@ -180,8 +180,8 @@ class timelineView: ViewStyle, UIScrollViewDelegate {
                 if let lessons = lessons as? [PFObject] {
                     for lesson in lessons {
                         
-                        var lessonDate = lesson.valueForKey("date") as! NSDate
-                        var optionalKid = lesson.valueForKey("studentName") as? String
+                        let lessonDate = lesson.valueForKey("date") as! NSDate
+                        let optionalKid = lesson.valueForKey("studentName") as? String
                         var kid:String!
                         
                         if(optionalKid != nil) {
@@ -190,9 +190,9 @@ class timelineView: ViewStyle, UIScrollViewDelegate {
                             kid = ""
                         }
                         
-                        var clientName = lesson.valueForKey("clientName") as! String
+                        let clientName = lesson.valueForKey("clientName") as! String
                         
-                        var dateFormatter = NSDateFormatter()
+                        let dateFormatter = NSDateFormatter()
                         dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
                         let stringDate: String = dateFormatter.stringFromDate(lessonDate)
                         
@@ -201,7 +201,7 @@ class timelineView: ViewStyle, UIScrollViewDelegate {
                         let stringTime: String = dateFormatter.stringFromDate(lessonDate)
                         
                         let myCalendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)!
-                        let myComponents = myCalendar.components(.CalendarUnitWeekday, fromDate: lessonDate)
+                        let myComponents = myCalendar.components(.Weekday, fromDate: lessonDate)
                         let weekday = self.dayOfWeek(myComponents.weekday)
                     
                         let newLesson = lessonStruct(time: stringTime, dateString: stringDate, date: lessonDate, weekday: weekday, client: clientName, student: kid, instructor: lesson.valueForKey("instructorName") as! String)
@@ -230,7 +230,7 @@ class timelineView: ViewStyle, UIScrollViewDelegate {
                 
                 for var x = 0; x < self.lessonArray.count; x++ {
                     
-                    var lessonDate = self.lessonArray[x].date as NSDate!
+                    let lessonDate = self.lessonArray[x].date as NSDate!
                     
                     if lessonDate.timeIntervalSinceNow.isSignMinus {
                         
@@ -253,7 +253,7 @@ class timelineView: ViewStyle, UIScrollViewDelegate {
 
                 for var x = 0; x < self.lessonArray.count; x++ {
                     
-                    var lessonDate = self.lessonArray[x].date as NSDate!
+                    let lessonDate = self.lessonArray[x].date as NSDate!
                     
                     if lessonDate.timeIntervalSinceNow.isSignMinus {
                         
@@ -295,14 +295,14 @@ class timelineView: ViewStyle, UIScrollViewDelegate {
         var frame = self.navigationController!.navigationBar.frame;
         var mainViewFrame = self.view.frame
         
-        var statusBarHeight = UIApplication.sharedApplication().statusBarFrame.height
-        var size = frame.size.height - statusBarHeight - 1
-        var framePercentageHidden = ((statusBarHeight - frame.origin.y) / (frame.size.height - 1)) * 1.5
-        var scrollOffset = scrollView.contentOffset.y
-        var scrollDiff = scrollOffset - self.previousScrollViewYOffset
-        var scrollHeight = scrollView.frame.size.height
-        var scrollContentSizeHeight = scrollView.contentSize.height + scrollView.contentInset.bottom
-        var statusBarHidden = UIApplication.sharedApplication().statusBarHidden
+        let statusBarHeight = UIApplication.sharedApplication().statusBarFrame.height
+        let size = frame.size.height - statusBarHeight - 1
+        let framePercentageHidden = ((statusBarHeight - frame.origin.y) / (frame.size.height - 1)) * 1.5
+        let scrollOffset = scrollView.contentOffset.y
+        let scrollDiff = scrollOffset - self.previousScrollViewYOffset
+        let scrollHeight = scrollView.frame.size.height
+        let scrollContentSizeHeight = scrollView.contentSize.height + scrollView.contentInset.bottom
+        let statusBarHidden = UIApplication.sharedApplication().statusBarHidden
         
         if (scrollOffset <= -scrollView.contentInset.top) {
             
@@ -332,7 +332,7 @@ class timelineView: ViewStyle, UIScrollViewDelegate {
         } else {
             
             frame.origin.y = min(statusBarHeight, max(-size, frame.origin.y - scrollDiff))
-            var mainScrollOffset = min(0, max(mainViewOffset + (statusBarHidden ? 15 : 0), mainViewFrame.origin.y - scrollDiff))
+            let mainScrollOffset = min(0, max(mainViewOffset + (statusBarHidden ? 15 : 0), mainViewFrame.origin.y - scrollDiff))
             mainViewFrame.origin.y = mainScrollOffset
             
         }
@@ -356,8 +356,8 @@ class timelineView: ViewStyle, UIScrollViewDelegate {
     
     func stoppedScrolling()
     {
-        var frame = self.navigationController!.navigationBar.frame;
-        var statusBarHeight = UIApplication.sharedApplication().statusBarFrame.height
+        let frame = self.navigationController!.navigationBar.frame;
+        let statusBarHeight = UIApplication.sharedApplication().statusBarFrame.height
         
         if (frame.origin.y < statusBarHeight) {
             self.animateNavBarTo(-(UIApplication.sharedApplication().statusBarHidden ? 8 : frame.size.height - 21))
@@ -366,7 +366,7 @@ class timelineView: ViewStyle, UIScrollViewDelegate {
     
     func updateBarButtonItems(alpha: CGFloat)
     {
-        var leftBarItems:NSArray = self.navigationItem.leftBarButtonItems! as NSArray
+        let leftBarItems:NSArray = self.navigationItem.leftBarButtonItems! as NSArray
         
         for item in leftBarItems {
             if let barItem = item as? UIBarButtonItem {
@@ -388,9 +388,9 @@ class timelineView: ViewStyle, UIScrollViewDelegate {
         UIView.animateWithDuration(0.2, animations: { () -> Void in
             var frame = self.navigationController!.navigationBar.frame
             var mainViewFrame = self.view.frame
-            var statusBarHidden = UIApplication.sharedApplication().statusBarHidden
+            let statusBarHidden = UIApplication.sharedApplication().statusBarHidden
             
-            var alpha:CGFloat = (frame.origin.y >= y ? 0 : 1)
+            let alpha:CGFloat = (frame.origin.y >= y ? 0 : 1)
             
             frame.origin.y = y + (statusBarHidden ? -20 : 0)
             mainViewFrame.origin.y = y - 21
@@ -434,20 +434,20 @@ class day: UIView {
     
     init(x: CGFloat, y: CGFloat, lessons: [lessonStruct]) {
         
-        var width = UIScreen.mainScreen().bounds.width - 32
+        let width = UIScreen.mainScreen().bounds.width - 32
         let dayView:CGRect = CGRectMake(x, y, width, 35)
 
         super.init(frame: dayView)
 
         alpha = 1.0
         
-        var dayLabel = UILabel(frame: CGRectMake(0, 0, 80, 20))
+        let dayLabel = UILabel(frame: CGRectMake(0, 0, 80, 20))
         dayLabel.textAlignment = NSTextAlignment.Left
         dayLabel.font = UIFont(name: dayLabel.font.fontName, size: 14)
         dayLabel.textColor = UIColor.whiteColor()
         dayLabel.text = lessons[0].weekday
         
-        var dateLabel = UILabel(frame: CGRectMake(width - 120, 0, 120, 20))
+        let dateLabel = UILabel(frame: CGRectMake(width - 120, 0, 120, 20))
         dateLabel.textAlignment = NSTextAlignment.Right
         dateLabel.font = UIFont(name: dateLabel.font.fontName, size: 14)
         dateLabel.textColor = UIColor.whiteColor()
@@ -459,20 +459,20 @@ class day: UIView {
         var y:CGFloat = 35
         for var x = 0; x < lessons.count; ++x{
             
-            var view = event(x: 0, y: y, lesson: lessons[x])
+            let view = event(x: 0, y: y, lesson: lessons[x])
             self.addSubview(view)
             y += 85
             self.frame.size.height += 85
             
-            var views = Dictionary(dictionaryLiteral: ("newEvent", view))
-            var horrizontalConstraint = NSLayoutConstraint.constraintsWithVisualFormat("H:|[newEvent]|", options: nil, metrics: nil, views: views)
+            let views = Dictionary(dictionaryLiteral: ("newEvent", view))
+            let horrizontalConstraint = NSLayoutConstraint.constraintsWithVisualFormat("H:|[newEvent]|", options: [], metrics: nil, views: views)
             self.addConstraints(horrizontalConstraint)
             
         }
         
     }
 
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
@@ -482,27 +482,27 @@ class event: UIView {
     
     init(x: CGFloat, y: CGFloat, lesson: lessonStruct) {
         
-        var width = UIScreen.mainScreen().bounds.width - 32
+        let width = UIScreen.mainScreen().bounds.width - 32
         let eventView:CGRect = CGRectMake(x, y, width, 75)
         super.init(frame: eventView)
         
         self.backgroundColor = UIColor(white: 1, alpha: 0.3)
         
-        var timeLabel = UILabel(frame: CGRectMake(45, 11, 80, 20))
+        let timeLabel = UILabel(frame: CGRectMake(45, 11, 80, 20))
         timeLabel.textAlignment = NSTextAlignment.Left
         timeLabel.font = UIFont(name: timeLabel.font.fontName, size: 14)
         timeLabel.textColor = UIColor(white: 1, alpha: 1)
         timeLabel.text = lesson.time
         self.addSubview(timeLabel)
         
-        var nameLabel = UILabel(frame: CGRectMake(17, 33, 200, 40))
+        let nameLabel = UILabel(frame: CGRectMake(17, 33, 200, 40))
         nameLabel.textAlignment = NSTextAlignment.Left
         nameLabel.font = UIFont(name: nameLabel.font.fontName, size: 16)
         nameLabel.textColor = UIColor(white: 1, alpha: 1)
         nameLabel.text = lesson.student
         self.addSubview(nameLabel)
         
-        var kidLabel = UILabel(frame: CGRectMake(width - 164, 10, 150, 20))
+        let kidLabel = UILabel(frame: CGRectMake(width - 164, 10, 150, 20))
         kidLabel.textAlignment = NSTextAlignment.Right
         kidLabel.font = UIFont(name: kidLabel.font.fontName, size: 14)
         kidLabel.textColor = UIColor(white: 1, alpha: 1)
@@ -517,7 +517,7 @@ class event: UIView {
         
     }
     
-    required init(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     

@@ -42,9 +42,6 @@
 		34D2BF961B3A6F7B00AD1ABE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34D2BF951B3A6F7B00AD1ABE /* SystemConfiguration.framework */; };
 		34D2BF981B3A6F8A00AD1ABE /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 34D2BF971B3A6F8A00AD1ABE /* libz.dylib */; };
 		34D2BF9A1B3A6F9400AD1ABE /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 34D2BF991B3A6F9400AD1ABE /* libsqlite3.dylib */; };
-		34D2BFA31B3A711A00AD1ABE /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 34D2BF9E1B3A711A00AD1ABE /* plus.png */; };
-		34D2BFA41B3A711A00AD1ABE /* timelineIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 34D2BF9F1B3A711A00AD1ABE /* timelineIcon.png */; };
-		34D2BFAB1B3A712A00AD1ABE /* calendarImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 34D2BFA71B3A712A00AD1ABE /* calendarImage.png */; };
 		34D2BFAC1B3A712A00AD1ABE /* clockImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 34D2BFA81B3A712A00AD1ABE /* clockImage.png */; };
 		34D2BFB01B3A718700AD1ABE /* ViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2BFAF1B3A718700AD1ABE /* ViewStyle.swift */; };
 		34D2BFB21B3A798700AD1ABE /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2BFB11B3A798700AD1ABE /* TimelineViewController.swift */; };
@@ -102,9 +99,6 @@
 		34D2BF951B3A6F7B00AD1ABE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		34D2BF971B3A6F8A00AD1ABE /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		34D2BF991B3A6F9400AD1ABE /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		34D2BF9E1B3A711A00AD1ABE /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus.png; sourceTree = "<group>"; };
-		34D2BF9F1B3A711A00AD1ABE /* timelineIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timelineIcon.png; sourceTree = "<group>"; };
-		34D2BFA71B3A712A00AD1ABE /* calendarImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendarImage.png; sourceTree = "<group>"; };
 		34D2BFA81B3A712A00AD1ABE /* clockImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clockImage.png; sourceTree = "<group>"; };
 		34D2BFAF1B3A718700AD1ABE /* ViewStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewStyle.swift; sourceTree = "<group>"; };
 		34D2BFB11B3A798700AD1ABE /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
@@ -188,9 +182,6 @@
 				3441EC661B5A3CFD00334A89 /* signUpImage.png */,
 				34D2BF5F1B3A6EED00AD1ABE /* Images.xcassets */,
 				34D2BF571B3A6EED00AD1ABE /* My_Swim_Schedule.xcdatamodeld */,
-				34D2BF9E1B3A711A00AD1ABE /* plus.png */,
-				34D2BF9F1B3A711A00AD1ABE /* timelineIcon.png */,
-				34D2BFA71B3A712A00AD1ABE /* calendarImage.png */,
 				34D2BFA81B3A712A00AD1ABE /* clockImage.png */,
 				34CFD6DD1B4F8F93003766CB /* Bridging-Header.h */,
 				34D2BF531B3A6EED00AD1ABE /* Supporting Files */,
@@ -291,7 +282,9 @@
 		34D2BF481B3A6EED00AD1ABE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = RJ;
 				TargetAttributes = {
 					34D2BF4F1B3A6EED00AD1ABE = {
@@ -334,14 +327,11 @@
 				34180BB71B55ADB400145349 /* background.png in Resources */,
 				343156E61B40FB770033310C /* emailIcon.png in Resources */,
 				3415838D1B5732A60014F5C8 /* leftIcon.png in Resources */,
-				34D2BFAB1B3A712A00AD1ABE /* calendarImage.png in Resources */,
 				3415838B1B57315B0014F5C8 /* rightIcon.png in Resources */,
-				34D2BFA41B3A711A00AD1ABE /* timelineIcon.png in Resources */,
 				34A1A44B1B4E5A0F002AE06E /* more.png in Resources */,
 				34D2BFAC1B3A712A00AD1ABE /* clockImage.png in Resources */,
 				3441EC671B5A3CFD00334A89 /* moreButton.png in Resources */,
 				3441EC691B5A3CFD00334A89 /* sampleLogInImage.png in Resources */,
-				34D2BFA31B3A711A00AD1ABE /* plus.png in Resources */,
 				3441EC6A1B5A3CFD00334A89 /* signUpImage.png in Resources */,
 				34D2BF601B3A6EED00AD1ABE /* Images.xcassets in Resources */,
 				343156E71B40FB770033310C /* nameIcon.png in Resources */,
@@ -422,7 +412,9 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -467,6 +459,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -498,6 +491,7 @@
 				);
 				INFOPLIST_FILE = "My Swim Schedule/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = LessonBuddy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
@@ -517,6 +511,7 @@
 				);
 				INFOPLIST_FILE = "My Swim Schedule/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = LessonBuddy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
@@ -537,6 +532,7 @@
 				);
 				INFOPLIST_FILE = "My Swim ScheduleTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.RJ.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/My Swim Schedule.app/My Swim Schedule";
 			};
@@ -552,6 +548,7 @@
 				);
 				INFOPLIST_FILE = "My Swim ScheduleTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.RJ.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/My Swim Schedule.app/My Swim Schedule";
 			};

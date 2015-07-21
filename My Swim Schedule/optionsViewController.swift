@@ -39,7 +39,7 @@ class optionsViewController: ViewStyle {
     override func viewDidLoad() {
         
         setBackground("background.png")
-        var userFullName = PFUser.currentUser()?.valueForKey("name") as! String
+        let userFullName = PFUser.currentUser()?.valueForKey("name") as! String
         loggedInLabel.text = "Logged in as " + userFullName
         
         updateViewConstraints(UIApplication.sharedApplication().statusBarOrientation)

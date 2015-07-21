@@ -40,18 +40,18 @@ class ViewStyle: UIViewController {
         
         let views = Dictionary(dictionaryLiteral: ("backgroundView", backgroundImageView))
         
-        let horizontalConstraints = NSLayoutConstraint.constraintsWithVisualFormat("H:|[backgroundView]|", options: nil, metrics: nil, views: views)
+        let horizontalConstraints = NSLayoutConstraint.constraintsWithVisualFormat("H:|[backgroundView]|", options: [], metrics: nil, views: views)
         self.view.addConstraints(horizontalConstraints)
         
-        backgroundImageView.setTranslatesAutoresizingMaskIntoConstraints(false)
+        backgroundImageView.translatesAutoresizingMaskIntoConstraints = false
         
     }
     
     func leftNavTitle(title: String) -> UIView {
         
-        var width = CGFloat(320.0)
-        var height = CGFloat(20.0)
-        var xOffset = CGFloat(-8)
+        let width = CGFloat(320.0)
+        let height = CGFloat(20.0)
+        let xOffset = CGFloat(-8)
         
         let customView = UIView(frame: CGRectMake(0, 0, width, height))
         let titleView = UIView(frame: CGRectMake(xOffset, 0, 100, height))

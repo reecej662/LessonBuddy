@@ -30,16 +30,17 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         self.delegate = self
         self.dataSource = self
             
-        var page1:AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("demoPage1ID")
-        var page2:AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("demoPage2ID")
-        var page3:AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("demoPage3ID")
-        var page4:AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("demoPage4ID")
-        var page5:AnyObject! = self.storyboard?.instantiateViewControllerWithIdentifier("demoPage5ID")
+        let page1:UIViewController! = self.storyboard?.instantiateViewControllerWithIdentifier("demoPage1ID")
+        let page2:UIViewController! = self.storyboard?.instantiateViewControllerWithIdentifier("demoPage2ID")
+        let page3:UIViewController! = self.storyboard?.instantiateViewControllerWithIdentifier("demoPage3ID")
+        let page4:UIViewController! = self.storyboard?.instantiateViewControllerWithIdentifier("demoPage4ID")
+        let page5:UIViewController! = self.storyboard?.instantiateViewControllerWithIdentifier("demoPage5ID")
         
         pages = [page1, page2, page3, page4, page5]
         
-        self.automaticallyAdjustsScrollViewInsets = false
         
+        self.automaticallyAdjustsScrollViewInsets = false
+
         setViewControllers([page1], direction: UIPageViewControllerNavigationDirection.Forward, animated: false, completion: nil)
         
     }
@@ -90,9 +91,8 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
         
     }
     
-    func pageViewController(pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [AnyObject], transitionCompleted completed: Bool) {
-        currentIndex = pages.indexOfObject(previousViewControllers[0])
-    
+    func pageViewController(pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        currentIndex = pages.indexOfObject(previousViewControllers[0] as AnyObject)
     }
     
     func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
@@ -104,8 +104,8 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
     }
     
     func changePage (direction: UIPageViewControllerNavigationDirection) {
-    
-        currentIndex = pages.indexOfObject(self.viewControllers[0])
+        
+        currentIndex = pages.indexOfObject(self.viewControllers![0])
         
         if (direction == UIPageViewControllerNavigationDirection.Forward) {
             currentIndex++
@@ -115,15 +115,18 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
             currentIndex = (currentIndex == -1 ? 0 : currentIndex)
         }
         
+        print(currentIndex)
+        
         if(currentIndex < pages.count) {
-            setViewControllers([pages[currentIndex]], direction: direction, animated: true, completion: nil)
+            let viewController = pages[currentIndex] as? UIViewController
+            setViewControllers([viewController!], direction: direction, animated: true, completion: nil)
         }
 
     }
     
     func updateParentButtons() {
-        
-        var tempCurrentIndex = (pages.count > 0 ? pages.indexOfObject(self.viewControllers[0]) : 0)
+
+        let tempCurrentIndex = (pages.count > 0 ? pages.indexOfObject(self.viewControllers![0]) : 0)
         
         if parentController != nil {
             
@@ -152,10 +155,10 @@ class DemoViewController: ViewStyle {
     override func viewDidLoad() {
         self.view.backgroundColor = UIColor.clearColor()
         
-        var topConstraints = [topConstraint1, topConstraint2, topConstraint3, topConstraint4, topConstraint5]
-        var pictureConstraints = [[menuPictureHeight, menuPictureWidth], [samplePictureHeight, samplePictureWidth]]
+        let topConstraints = [topConstraint1, topConstraint2, topConstraint3, topConstraint4, topConstraint5]
+        let pictureConstraints = [[menuPictureHeight, menuPictureWidth], [samplePictureHeight, samplePictureWidth]]
         
-        var screenSize = UIScreen.mainScreen().bounds.height
+        let screenSize = UIScreen.mainScreen().bounds.height
         
         for constraint in topConstraints {
             
@@ -226,10 +229,8 @@ class ScrollContainerView: ViewStyle {
     override func viewDidLoad() {
         setBackground("background.png")
 
-        var leftScrollImage = UIImage(named: "leftIcon.png")
-        var rightScrollImage = UIImage(named: "rightIcon.png")
-        
-        var insets = UIEdgeInsetsMake(15, 0, 15, 15)
+        let leftScrollImage = UIImage(named: "leftIcon.png")
+        let rightScrollImage = UIImage(named: "rightIcon.png")
         
         rightScrollButton.setImage(rightScrollImage, forState: .Normal)
         leftScrollButton.setImage(leftScrollImage, forState: .Normal)
