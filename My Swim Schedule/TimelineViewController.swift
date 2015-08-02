@@ -26,37 +26,32 @@ class timelineView: ViewStyle, UIScrollViewDelegate {
     var userId:String!
     var selection = "current"
     
-    var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
+    let activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
     
     @IBAction func current(sender: AnyObject) {
-        selectionView.frame.origin.x = sender.frame.origin.x
-        selection = "current"
-        getSelectedLessons("current")
-        
-        animateNavBarTo(UIApplication.sharedApplication().statusBarFrame.height)
-        updateBarButtonItems(1.0)
-        rightBarItem.image = UIImage(named: "more.png")
+        changePage(sender.frame.origin.x, page: "current")
     }
     
     @IBAction func all(sender: AnyObject) {
-        selectionView.frame.origin.x = sender.frame.origin.x
-        selection = "all"
-        getSelectedLessons("all")
-
-        animateNavBarTo(UIApplication.sharedApplication().statusBarFrame.height)
-        updateBarButtonItems(1.0)
-        rightBarItem.image = UIImage(named: "more.png")
+        changePage(sender.frame.origin.x, page: "all")
     }
     
     @IBAction func past(sender: AnyObject) {
-        selectionView.frame.origin.x = sender.frame.origin.x
-        selection = "past"
-        getSelectedLessons("past")
+        changePage(sender.frame.origin.x, page: "past")
+    }
+    
+    func changePage(x: CGFloat, page: String) {
+        UIView.animateWithDuration(0.1) { () -> Void in
+            self.selectionView.frame.origin.x = x
+        }
+        selection = page
+        getSelectedLessons(page)
         
         animateNavBarTo(UIApplication.sharedApplication().statusBarFrame.height)
         updateBarButtonItems(1.0)
         rightBarItem.image = UIImage(named: "more.png")
     }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -96,7 +91,42 @@ class timelineView: ViewStyle, UIScrollViewDelegate {
             performSegueWithIdentifier("login", sender: self)
             
         }
+
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: "swipedLeft")
+        swipeLeft.direction = UISwipeGestureRecognizerDirection.Left
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: "swipedRight")
+        swipeRight.direction = UISwipeGestureRecognizerDirection.Right
         
+        scrollView.addGestureRecognizer(swipeLeft)
+        scrollView.addGestureRecognizer(swipeRight)
+        
+        
+    }
+    
+    func swipedRight() {
+        switch selection {
+        case "current":
+            break
+        case "all":
+            changePage(0, page: "current")
+        case "past":
+            changePage((UIScreen.mainScreen().bounds.width / 3), page: "all")
+        default:
+            return
+        }
+    }
+    
+    func swipedLeft() {
+        switch selection {
+        case "current":
+            changePage(UIScreen.mainScreen().bounds.width / 3, page: "all")
+        case "all":
+            changePage(2 * (UIScreen.mainScreen().bounds.width / 3), page: "past")
+        case "past":
+            break
+        default:
+            return
+        }
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -150,7 +180,7 @@ class timelineView: ViewStyle, UIScrollViewDelegate {
     
     func getParseData(completion: (result: String) -> Void) {
         
-        activityIndicator = UIActivityIndicatorView(frame: CGRectMake(0, 0, 50, 50))
+        activityIndicator.frame = CGRectMake(0, 0, 50, 50)
         activityIndicator.center = self.view.center
         activityIndicator.hidesWhenStopped = true
         activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.White
@@ -306,24 +336,9 @@ class timelineView: ViewStyle, UIScrollViewDelegate {
         
         if (scrollOffset <= -scrollView.contentInset.top) {
             
-            //refresher in middle of page while loading names
-            /*
-            activityIndicator = UIActivityIndicatorView(frame: CGRectMake(0, 0, 50, 50))
-            activityIndicator.center = self.view.center
-            activityIndicator.hidesWhenStopped = true
-            activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
-            view.addSubview(activityIndicator)
-            UIApplication.sharedApplication().beginIgnoringInteractionEvents()
-            */
-            
             frame.origin.y = statusBarHeight
             mainViewFrame.origin.y = 0
-            
-            /*
-            UIApplication.sharedApplication().endIgnoringInteractionEvents()
-            self.refresher.endRefreshing()
-            */
-            
+
         } else if ((scrollOffset + scrollHeight) >= scrollContentSizeHeight) {
             
             frame.origin.y = -size

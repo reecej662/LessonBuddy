@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>1061D48C-8B09-43C9-9B0F-A80A5A011AF5</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>My Swim Schedule</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>1C71489D1D7886A040A9E614246DE816DD9263D0</key>
 		<string>https://github.com/reecej662/LessonBuddy.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>My Swim Schedule.xcodeproj/project.xcworkspace</string>
+	<string>My Swim Schedule.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>1C71489D1D7886A040A9E614246DE816DD9263D0</key>

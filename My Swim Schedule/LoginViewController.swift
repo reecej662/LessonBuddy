@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class LoginViewController: UIViewController, UITextFieldDelegate {
+class LoginViewController: ViewStyle, UITextFieldDelegate {
 
     /* When somebody registers for an account, match a client in the database with 
     their first and last name. Add a text field to client that stores that ID and 
@@ -35,6 +35,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var textField2: UITextField!
     @IBOutlet var textField3: UITextField!
 
+    @IBOutlet var demoLabel: UILabel!
+    
     var textLines = [UIView()]
     
     @IBOutlet var login: UIButton!
@@ -59,12 +61,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setBackground("background.png")
+        
         textField1.attributedPlaceholder = NSAttributedString(string: "Username", attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
         textField2.attributedPlaceholder = NSAttributedString(string: "Password", attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
         textField3.attributedPlaceholder = NSAttributedString(string: "Password", attributes:[NSForegroundColorAttributeName: UIColor.whiteColor()])
         addLines()
         
-        backgroundImage.image = UIImage(named: "background.png")
         updateViewConstraints(UIApplication.sharedApplication().statusBarOrientation)
         
         textView3.hidden = true
@@ -210,6 +213,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         viewImage2.image = UIImage(named: "passwordIcon.png")
         textView3.hidden = true
+        hideDemoLabel(1)
         
         textField1.text = ""
         textField2.text = ""
@@ -231,6 +235,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
         viewImage2.image = UIImage(named: "emailIcon.png")
         textView3.hidden = false
+        hideDemoLabel(0)
         
         textField1.text = ""
         textField2.text = ""
@@ -317,6 +322,24 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             topHeightConstraint.constant = hTopHeight
             titleToTopConstraint.constant = hTitleToTop
             buttonsToTitleConstraint.constant = hButtonsToTitle
+            
+        }
+        
+    }
+    
+    func hideDemoLabel(alpha: Int) {
+        
+        if (alpha == 1) {
+        
+            UILabel.animateWithDuration(0.2, animations: { () -> Void in
+                self.demoLabel.alpha = 1
+            })
+            
+        } else {
+            
+            UILabel.animateWithDuration(0.2, animations: { () -> Void in
+                self.demoLabel.alpha = 0
+            })
             
         }
         
