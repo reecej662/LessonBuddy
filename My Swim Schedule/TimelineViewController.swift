@@ -40,19 +40,6 @@ class timelineView: ViewStyle, UIScrollViewDelegate {
         changePage(sender.frame.origin.x, page: "past")
     }
     
-    func changePage(x: CGFloat, page: String) {
-        UIView.animateWithDuration(0.1) { () -> Void in
-            self.selectionView.frame.origin.x = x
-        }
-        selection = page
-        getSelectedLessons(page)
-        
-        animateNavBarTo(UIApplication.sharedApplication().statusBarFrame.height)
-        updateBarButtonItems(1.0)
-        rightBarItem.image = UIImage(named: "more.png")
-    }
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -101,32 +88,6 @@ class timelineView: ViewStyle, UIScrollViewDelegate {
         scrollView.addGestureRecognizer(swipeRight)
         
         
-    }
-    
-    func swipedRight() {
-        switch selection {
-        case "current":
-            break
-        case "all":
-            changePage(0, page: "current")
-        case "past":
-            changePage((UIScreen.mainScreen().bounds.width / 3), page: "all")
-        default:
-            return
-        }
-    }
-    
-    func swipedLeft() {
-        switch selection {
-        case "current":
-            changePage(UIScreen.mainScreen().bounds.width / 3, page: "all")
-        case "all":
-            changePage(2 * (UIScreen.mainScreen().bounds.width / 3), page: "past")
-        case "past":
-            break
-        default:
-            return
-        }
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -375,7 +336,7 @@ class timelineView: ViewStyle, UIScrollViewDelegate {
         let statusBarHeight = UIApplication.sharedApplication().statusBarFrame.height
         
         if (frame.origin.y < statusBarHeight) {
-            self.animateNavBarTo(-(UIApplication.sharedApplication().statusBarHidden ? 8 : frame.size.height - 21))
+            self.animateNavBarTo(-(UIApplication.sharedApplication().statusBarHidden ? 29 : frame.size.height - 21))
         }
     }
     
@@ -407,14 +368,54 @@ class timelineView: ViewStyle, UIScrollViewDelegate {
             
             let alpha:CGFloat = (frame.origin.y >= y ? 0 : 1)
             
-            frame.origin.y = y + (statusBarHidden ? -20 : 0)
-            mainViewFrame.origin.y = y - 21
+            frame.origin.y = y //+ (statusBarHidden ? -20 : 0)
+            mainViewFrame.origin.y = y + (statusBarHidden ? 0 : -21)
+
             
             self.navigationController!.navigationBar.frame = frame
             self.view.frame = mainViewFrame
             
             self.updateBarButtonItems(alpha)
         })
+    }
+    
+    func changePage(x: CGFloat, page: String) {
+        UIView.animateWithDuration(0.1) { () -> Void in
+            self.selectionView.frame.origin.x = x
+        }
+        selection = page
+        getSelectedLessons(page)
+        
+        animateNavBarTo(UIApplication.sharedApplication().statusBarFrame.height)
+        updateBarButtonItems(1.0)
+        rightBarItem.image = UIImage(named: "more.png")
+        print(selection)
+    }
+    
+    func swipedRight() {
+        switch selection {
+        case "current":
+            break
+        case "all":
+            changePage(0, page: "current")
+        case "past":
+            changePage((UIScreen.mainScreen().bounds.width / 3), page: "all")
+        default:
+            return
+        }
+    }
+    
+    func swipedLeft() {
+        switch selection {
+        case "current":
+            changePage(UIScreen.mainScreen().bounds.width / 3, page: "all")
+        case "all":
+            changePage(2 * (UIScreen.mainScreen().bounds.width / 3), page: "past")
+        case "past":
+            break
+        default:
+            return
+        }
     }
 
     

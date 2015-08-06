@@ -242,7 +242,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gZ6-di-DDl">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="94"/>
+                                <rect key="frame" x="-4" y="0.0" width="383" height="94"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Of-a3-vBM">
                                         <rect key="frame" x="0.0" y="92" width="107" height="2"/>
@@ -252,7 +252,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WeD-nH-sLY">
-                                        <rect key="frame" x="0.0" y="64" width="125" height="30"/>
+                                        <rect key="frame" x="0.0" y="64" width="128" height="30"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Current">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -262,8 +262,8 @@
                                             <action selector="current:" destination="x6g-zU-IE2" eventType="touchUpInside" id="BXq-rP-diI"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ex6-43-XQY">
-                                        <rect key="frame" x="125" y="64" width="125" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ex6-43-XQY">
+                                        <rect key="frame" x="128" y="64" width="127" height="30"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="All">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -274,7 +274,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DGQ-Ib-sxF">
-                                        <rect key="frame" x="250" y="64" width="125" height="30"/>
+                                        <rect key="frame" x="255" y="64" width="128" height="30"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                                         <state key="normal" title="Past">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -324,8 +324,8 @@
                         <constraints>
                             <constraint firstItem="N82-oT-LnD" firstAttribute="top" secondItem="gZ6-di-DDl" secondAttribute="bottom" id="86f-e3-o13"/>
                             <constraint firstItem="Pq9-yD-Zxy" firstAttribute="top" secondItem="N82-oT-LnD" secondAttribute="bottom" constant="-44" id="Gqk-Fw-LL8"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="gZ6-di-DDl" secondAttribute="trailing" constant="-16" id="IdW-oh-b5m"/>
-                            <constraint firstItem="gZ6-di-DDl" firstAttribute="leading" secondItem="ydN-ib-prc" secondAttribute="leadingMargin" constant="-16" id="NX8-4c-959"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gZ6-di-DDl" secondAttribute="trailing" constant="-20" id="IdW-oh-b5m"/>
+                            <constraint firstItem="gZ6-di-DDl" firstAttribute="leading" secondItem="ydN-ib-prc" secondAttribute="leadingMargin" constant="-20" id="NX8-4c-959"/>
                             <constraint firstItem="gZ6-di-DDl" firstAttribute="top" secondItem="1Ge-PF-bws" secondAttribute="bottom" constant="-64" id="V0k-Yf-l3n"/>
                             <constraint firstItem="N82-oT-LnD" firstAttribute="top" secondItem="gZ6-di-DDl" secondAttribute="top" id="XOs-gx-qil"/>
                             <constraint firstItem="N82-oT-LnD" firstAttribute="top" secondItem="gZ6-di-DDl" secondAttribute="bottom" id="XkW-gm-1Ly"/>
@@ -914,6 +914,6 @@
         <image name="signUpImage.png" width="640" height="363"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Jbw-fo-T5c"/>
+        <segue reference="69t-Bm-CoE"/>
     </inferredMetricsTieBreakers>
 </document>
